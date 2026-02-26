@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@utility flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root{
+  @apply flex-center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+

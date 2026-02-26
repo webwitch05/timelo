@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@utility flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Page ─────────────────────────────────────────────────────────────────── */
+.home-page {
+  @apply flex-center flex-col;
+  min-width: 100vw;
+  min-height: 100vh;   
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+/* ── Arrow ────────────────────────────────────────────────────────────────── */
+.arrow-btn {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.arrow-btn:hover {
+  transform: translateX(5px);
+}
+
+/* ── Logo ─────────────────────────────────────────────────────────────────── */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-bottom: 100px;
+  transition: color 0.4s ease;
+}
+
+/* ── Body layout ──────────────────────────────────────────────────────────── */
+.home-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+}
+
+/* ── Shared 2x2 grid ──────────────────────────────────────────────────────── */
+.tile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ── Theme tiles (left group) ─────────────────────────────────────────────── */
+.theme-tile {
+  width: 230px;
+  height: 230px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.theme-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.theme-tile.active {
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.theme-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.theme-tile--placeholder {
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ── Date cards (right group) ─────────────────────────────────────────────── */
+.date-card {
+  @apply flex-center;   
+  width: 230px;
+  height: 230px;
+  border-radius: 12px;
+  padding: 14px 16px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.date-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+.completion-badge {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 23 px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  transition: color 0.4s ease;
+}
+
+.card-date {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+  font-weight: 700;
+  transition: color 0.4s ease;
+}
