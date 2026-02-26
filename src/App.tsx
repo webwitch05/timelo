@@ -1,13 +1,29 @@
-import './App.css'
-import HomePage from './pages/HomePage'
+// App.tsx
+import { useState } from "react";
+import { type Theme } from "./theme";
+import HomePage from "./pages/HomePage";
+import MainPage from "./pages/MainPage";
 
-function App() {
+type Page = "home" | "main";
+
+export default function App() {
+  const [page, setPage]   = useState<Page>("home");
+  const [theme, setTheme] = useState<Theme>("red");
 
   return (
     <>
-      <HomePage/>
+      {page === "home" && (
+        <HomePage
+          onNavigate={() => setPage("main")}
+          onThemeChange={setTheme}
+        />
+      )}
+      {page === "main" && (
+        <MainPage
+          theme={theme}
+          onGoHome={() => setPage("home")}
+        />
+      )}
     </>
-  )
+  );
 }
-
-export default App

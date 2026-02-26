@@ -8,6 +8,11 @@ export interface ThemeConfig {
   tileBg: string;
   text: string;
   subtext: string;
+  timerText: string;
+  activeColor: string;
+  timerCardL: string;
+  timerCardR: string;
+
   progressBg: string;
   progressFill: string;
   badgeBg: string;
@@ -23,7 +28,11 @@ export const THEMES: Record<Theme, ThemeConfig> = {
     cardBg: "#FAE4EA",
     tileBg: "#E79AA2",
     text: "#313131",
-    subtext: "#ffffff",
+    subtext: "#F2E0D2",
+    timerText: "#D41F44",
+    activeColor: "#D41F44",
+    timerCardL: "#FFE2E7",
+    timerCardR: "#FFFFFF",
     imageUrl: "./red_theme_logo.png",
 
     // havent cnfm
@@ -38,7 +47,11 @@ export const THEMES: Record<Theme, ThemeConfig> = {
     tileBg: "#FAD0D7",
     text: "#FDF9F9",
     subtext: "#313131",
-    imageUrl: "./pink_theme_logo.png",
+    timerText:"#D6506F",
+    activeColor: "#FAD0D7",
+    timerCardL: "#F69DB3",
+    timerCardR: "#FFFFFF",    
+    imageUrl: "./pink_theme_logo2.png",
 
     //havent cnfm
     progressBg: "rgba(192,56,90,0.15)",

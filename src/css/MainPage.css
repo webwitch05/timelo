@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter";
+  --font-playfair-display: "Playfair Display";
+}
+
+
+@utility flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ── Page ─────────────────────────────────────────────────────────────────── */
+.main-page {
+  @apply flex-center flex-col;
+  min-width: 100vw;
+  min-height: 100vh;   
+  font-family: 'Inter', sans-serif;
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+/* ── Top icons ────────────────────────────────────────────────────────────── */
+.leftArrow-btn,
+.theme-btn {
+  position: absolute;
+  top: 53px;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.leftArrow-btn  { left: 112px;  }
+.theme-btn { right: 112px; }
+
+.leftArrow-btn:hover {
+  transform: translateX(-5px);
+}
+
+.theme-btn:hover {
+  opacity: 0.7;
+}
+
+/* ── Tab toggle ───────────────────────────────────────────────────────────── */
+.tab-toggle {
+  display: flex;
+  width: 615px;
+  height: 81px;
+  padding: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 66px;
+}
+
+.tab-toggle-btn {
+  @apply font-inter;
+  font-weight: 300;
+  flex: 1;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+  border-radius: 8px;
+}
+
+/* ── Content box ─────────────────────────────────────────────────────────── */
+.main-page-content {
+  width: 550px;
+  height: 550px;
+}

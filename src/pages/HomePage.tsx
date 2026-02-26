@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BsArrowRight } from "react-icons/bs";
 import { type Theme, THEMES } from "../theme";
 import DateCardGrid from '../components/DateCardGrid'
 import ThemeTileGrid from '../components/ThemeTileGrid'
@@ -8,22 +9,28 @@ import "../css/HomePage.css";
 
 interface HomePageProps {
   onNavigate?: () => void;
+  onThemeChange?: (theme: Theme) => void;
 }
 
-export default function HomePage({ onNavigate }: HomePageProps) {
+export default function HomePage({ onNavigate, onThemeChange }: HomePageProps) {
   const [theme, setTheme] = useState<Theme>("red");
   const t = THEMES[theme];
+
+  const handleThemeSelect = (newTheme: Theme) => {
+    setTheme(newTheme);
+    onThemeChange?.(newTheme);   // notify App.tsx
+  };  
 
   return (
     <div className="home-page" style={{ background: t.bg }}>
 
       {/* Arrow */}
       <button
-        className="arrow-btn"
+        className="rightArrow-btn"
         style={{ color: t.cardBg }}
         onClick={onNavigate}
       >
-        →
+        <BsArrowRight size={40} strokeWidth={0.5} />
       </button>
 
       {/* Logo */}
@@ -33,7 +40,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
       {/* Body: theme tiles left, date cards right */}
       <div className="home-body">
-        <ThemeTileGrid activeTheme={theme} onSelect={setTheme} />
+        <ThemeTileGrid activeTheme={theme} onSelect={handleThemeSelect} />
         <DateCardGrid theme={theme} />
       </div>
 
