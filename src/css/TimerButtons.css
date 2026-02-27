@@ -1,0 +1,56 @@
+/* ── Timer buttons container ──────────────────────────────────────────────── */
+.timer-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ── Base button ──────────────────────────────────────────────────────────── */
+.timer-btn {
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.timer-btn:hover {
+  filter: brightness(0.93);
+  transform: translateY(-2px);
+}
+
+.timer-btn:active {
+  transform: translateY(0);
+}
+
+.timer-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
+
+/* ── Variants ─────────────────────────────────────────────────────────────── */
+.timer-btn--main {
+  width: 70%;
+  margin-top: 65px;
+}
+
+.timer-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  margin-top: 65px;
+}
+
+.timer-btn--half {
+  width: 30%;
+}
+
+.timer-btn--extend {
+  width: 20%;
+}

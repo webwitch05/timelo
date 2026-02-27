@@ -14,6 +14,7 @@ export default function App() {
     <>
       {page === "home" && (
         <HomePage
+          theme={theme}
           onNavigate={() => setPage("main")}
           onThemeChange={setTheme}
         />

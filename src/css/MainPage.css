@@ -26,14 +26,14 @@
 .leftArrow-btn,
 .theme-btn {
   position: absolute;
-  top: 53px;
+  top: 42px;
   cursor: pointer;
   padding: 0;
   transition: opacity 0.2s ease;
 }
 
-.leftArrow-btn  { left: 112px;  }
-.theme-btn { right: 112px; }
+.leftArrow-btn  { left: 68px;  }
+.theme-btn { right: 68px; }
 
 .leftArrow-btn:hover {
   transform: translateX(-5px);
@@ -46,19 +46,20 @@
 /* ── Tab toggle ───────────────────────────────────────────────────────────── */
 .tab-toggle {
   display: flex;
-  width: 615px;
-  height: 81px;
+  width: 480px;
+  height: 65px;
   padding: 6px;
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 66px;
+  margin-bottom: 62px;
+  transform: translateY(-30px)
 }
 
 .tab-toggle-btn {
   @apply font-inter;
   font-weight: 300;
   flex: 1;
-  font-size: 40px;
+  font-size: 30px;
   border: none;
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease;
@@ -67,6 +68,7 @@
 
 /* ── Content box ─────────────────────────────────────────────────────────── */
 .main-page-content {
-  width: 550px;
-  height: 550px;
+  width:580px;
+  height: 580px;
+  transform: translateY(-30px);
 }

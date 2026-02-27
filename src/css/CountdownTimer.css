@@ -1,0 +1,67 @@
+/* ── Countdown timer ──────────────────────────────────────────────────────── */
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Yeseva One', serif;
+  font-size: 95px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.countdown-colon {
+  font-family: 'Yeseva One', serif;
+  font-size: 95px;
+  line-height: 1;
+  margin: 0 4px;
+  transition: color 0.4s ease;
+}
+
+/* ── Scroll digit ─────────────────────────────────────────────────────────── */
+.scroll-digit-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 1em; /* Matches your line-height */
+  vertical-align: bottom;  
+}
+
+.scroll-digit-strip {
+  display: flex;
+  flex-direction: column;
+}
+
+/* When changing, slide the whole strip up */
+.scroll-digit-strip.is-moving {
+  transform: translateY(-50%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-digit {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  text-align: center;
+}
+
+/* ── Editable time ────────────────────────────────────────────────────────── */
+.editable-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editable-time-input {
+  width: 2ch;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid currentColor;
+  font-family: 'Yeseva One', serif;
+  font-size: 95px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  outline: none;
+  letter-spacing: 0.05em;
+}

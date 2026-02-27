@@ -67,7 +67,6 @@ export default function MainPage({ theme, onGoHome }: MainPageProps) {
           <TimerView
             theme={theme}
             timeDisplay="00:00"
-            onSelectTask={() => console.log("select task")}
             onStart={() => console.log("start")}
           />
         )}

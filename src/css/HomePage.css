@@ -27,8 +27,8 @@
 /* ── Arrow ────────────────────────────────────────────────────────────────── */
 .rightArrow-btn {
   position: absolute;
-  top: 53px;
-  right: 112px;
+  top: 42px;
+  right: 68px;
   size: 50px;
   cursor: pointer;
   transition: transform 0.2s ease;

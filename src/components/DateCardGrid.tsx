@@ -1,5 +1,5 @@
 import { type Theme, THEMES } from "../theme";
-import { type DateCard, getRecentDates } from "../pages/homePageData";
+import { type DateCard, getRecentDates } from "../data/homePageData";
 
 // ── DateCard ──────────────────────────────────────────────────────────────────
 interface DateCardTileProps {

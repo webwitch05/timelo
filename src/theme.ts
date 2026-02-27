@@ -12,6 +12,7 @@ export interface ThemeConfig {
   activeColor: string;
   timerCardL: string;
   timerCardR: string;
+  timeCardText:string;
 
   progressBg: string;
   progressFill: string;
@@ -33,6 +34,7 @@ export const THEMES: Record<Theme, ThemeConfig> = {
     activeColor: "#D41F44",
     timerCardL: "#FFE2E7",
     timerCardR: "#FFFFFF",
+    timeCardText: "#FFFFFF",
     imageUrl: "./red_theme_logo.png",
 
     // havent cnfm
@@ -50,7 +52,8 @@ export const THEMES: Record<Theme, ThemeConfig> = {
     timerText:"#D6506F",
     activeColor: "#FAD0D7",
     timerCardL: "#F69DB3",
-    timerCardR: "#FFFFFF",    
+    timerCardR: "#FFFFFF",  
+    timeCardText: "#313131",
     imageUrl: "./pink_theme_logo2.png",
 
     //havent cnfm

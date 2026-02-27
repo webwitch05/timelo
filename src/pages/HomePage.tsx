@@ -8,16 +8,15 @@ import "../css/HomePage.css";
 // ── HomePage ──────────────────────────────────────────────────────────────────
 
 interface HomePageProps {
+  theme: Theme;
   onNavigate?: () => void;
   onThemeChange?: (theme: Theme) => void;
 }
 
-export default function HomePage({ onNavigate, onThemeChange }: HomePageProps) {
-  const [theme, setTheme] = useState<Theme>("red");
+export default function HomePage({ theme, onNavigate, onThemeChange }: HomePageProps) {
   const t = THEMES[theme];
 
   const handleThemeSelect = (newTheme: Theme) => {
-    setTheme(newTheme);
     onThemeChange?.(newTheme);   // notify App.tsx
   };  
 
